@@ -1,0 +1,21 @@
+{
+  "name": "bower.json",
+  "description": "This is the ui for the enterpise app",
+  "main": "index.js",
+  "version": "0.0.1",
+  "authors": [
+    "ambar rana"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "enterpise"
+  ],
+  "moduleType": [],
+  "homepage": "index.html",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.2.13",
+    "underscore": "^1.8.3",
+    "angular-ui-grid": "^3.2.9"
+  }
+}
