@@ -11,8 +11,12 @@ var gulp			= require('gulp'),
 	var config ={
 		appName: 'enterprise',
 		sources:{
-			scripts:['bower_components/*/*.js',
-					'bower_components/*/*.min.js'
+			scripts:['bower_components/angular/angular.js',
+					'bower_components/angular-ui-route/release/angular-ui-route.js',
+					'bower_components/angular-ui-grid/ui-grid.js',
+					'app/app.module.js',
+					'app/app.config.js'
+
 					],
 			fonts:[],
 			style:[],
