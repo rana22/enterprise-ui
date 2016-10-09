@@ -6,6 +6,7 @@ var gulp			= require('gulp'),
 	path			= require('path'),
 	cassnano		= require('gulp-cssnano');
 	sourcemaps 		= require('gulp-sourcemaps');
+	Server 			= require('karma').Server;
 
 
 	var config ={
@@ -22,7 +23,12 @@ var gulp			= require('gulp'),
 			style:[],
 			assests:[],
 			views:['app/core/views/index.html'],
-			test:[]
+			test:['app/build/all.js',
+				  'bower_components/angular-mocks/angular-mocks.js',
+					'bower_components/jquery/dist/jquery.js',
+					'bower_components/jasmine-jqeury/*.js',
+					'test/unit_test/*/*.js',
+					'test/unit_test/*/*.*.js']
 		} 
 	};
 
@@ -54,6 +60,23 @@ gulp.task('build-js', function(){
 gulp.task('copy-html', function(){
 	return gulp.src(config.sources.views)
 	.pipe(gulp.dest('app/build'))
+});
+
+gulp.task('build-test', function(){
+	return gulp.src(config.sources.test)
+	.pipe(sourcemaps.init())
+	.pipe(concat('all.unit.test.js'))
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest('test/build'));
+});
+
+gulp.task('unittest', function(done){
+	new Server({
+		configFile: path.join(__dirname, 'test/karma.conf.js'),
+		singleRun :false,
+		autoWatch : true,
+		reporters: ['mocha']
+	}, done).start();
 });
 
 gulp.task('build', ['build-js', 'copy-html']);
