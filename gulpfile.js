@@ -4,7 +4,7 @@ var gulp			= require('gulp'),
 	connect			= require('gulp-connect'),
 	concat			= require('gulp-concat'),
 	path			= require('path'),
-	cassnano		= require('gulp-cssnano');
+	cssnano			= require('gulp-cssnano');
 	sourcemaps 		= require('gulp-sourcemaps');
 	Server 			= require('karma').Server;
 
@@ -13,16 +13,27 @@ var gulp			= require('gulp'),
 		appName: 'enterprise',
 		sources:{
 			scripts:['bower_components/angular/angular.js',
-					'bower_components/angular-ui-route/release/angular-ui-route.js',
+					'bower_components/angular/angular.min.js',
+					'bower_components/angular-ui-router/release/angular-ui-router.js',
 					'bower_components/angular-ui-grid/ui-grid.js',
 					'app/app.module.js',
-					'app/app.config.js'
-
+					'app/app.config.js',
+					'app/services/*.module.js',
+					'app/*/scripts/*.module.js',
+					'app/services/*.routes.js',
+					'app/*/scripts/*.directive.js',
+					'app/services/*.constants.js',
+					'app/services/*.js',
+					'app/grid/scripts/*.module.js',
+					'app/grid/scripts/*.directive.js'
 					],
 			fonts:[],
-			style:[],
+			style:['bower_components/bootstrap-sass/stylesheets/_bootstrap.scss',
+					'app/core/styles/app.scss'],
 			assests:[],
-			views:['app/core/views/index.html'],
+			index:['app/core/views/index.html'],
+			views:['app/dashboard/views/dashboard.html',
+					'app/header/views/header.html'],
 			test:['app/build/all.js',
 				  'bower_components/angular-mocks/angular-mocks.js',
 					'bower_components/jquery/dist/jquery.js',
@@ -56,10 +67,26 @@ gulp.task('build-js', function(){
 
 });
 
+//generate css from sass
+gulp.task('build-css', function(){
+	return gulp.src(config.sources.style)
+	.pipe(sourcemaps.init())
+	.pipe(sass())
+	// .pipe(cssnano())
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest('app/build/style'))
+	.pipe(connect.reload());
+});
 
-gulp.task('copy-html', function(){
-	return gulp.src(config.sources.views)
+
+gulp.task('copy-index', function(){
+	return gulp.src(config.sources.index)
 	.pipe(gulp.dest('app/build'))
+});
+
+gulp.task('copy-views', function(){
+	return gulp.src(config.sources.views).
+	pipe(gulp.dest('app/build/views'))
 });
 
 gulp.task('build-test', function(){
@@ -79,7 +106,7 @@ gulp.task('unittest', function(done){
 	}, done).start();
 });
 
-gulp.task('build', ['build-js', 'copy-html']);
+gulp.task('build', ['build-js', 'copy-index', 'copy-views', 'build-css']);
 
 gulp.task('serve', ['watch' , 'connect'])
 
