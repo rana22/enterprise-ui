@@ -6,6 +6,7 @@ angular
 			['ui.router', 
 			'enterprise-service',
 			'enterprise-grid',
-			'entprise-header']);
+			'entprise-header',
+			'ent-footer']);
 })();
 
