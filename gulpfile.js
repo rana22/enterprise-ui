@@ -22,10 +22,10 @@ var gulp			= require('gulp'),
 					'app/*/scripts/*.module.js',
 					'app/services/*.routes.js',
 					'app/*/scripts/*.directive.js',
+					'app/*/scripts/*.controller.js',
 					'app/services/*.constants.js',
 					'app/services/*.js',
-					'app/grid/scripts/*.module.js',
-					'app/grid/scripts/*.directive.js'
+					'app/grid/scripts/*.module.js'
 					],
 			fonts:[],
 			style:['bower_components/bootstrap-sass/stylesheets/_bootstrap.scss',
@@ -73,7 +73,7 @@ gulp.task('build-css', function(){
 	return gulp.src(config.sources.style)
 	.pipe(sourcemaps.init())
 	.pipe(sass())
-	// .pipe(cssnano())
+	.pipe(cssnano())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/build/style'))
 	.pipe(connect.reload());

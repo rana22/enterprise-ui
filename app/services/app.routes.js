@@ -10,7 +10,8 @@ angular
 		$stateProvider
 			.state('home',{
 				url:'/enterprise/home',
-				templateUrl: '../views/dashboard.html'
+				templateUrl: '../views/dashboard.html',
+				controller: 'dashboardCtrl'
 			})
 	}
 })();

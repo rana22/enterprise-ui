@@ -7,6 +7,7 @@ angular
 			'enterprise-service',
 			'enterprise-grid',
 			'entprise-header',
-			'ent-footer']);
+			'ent-footer',
+			'ent-dashboard']);
 })();
 
