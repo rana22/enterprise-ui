@@ -1,4 +1,5 @@
 //top level sass file
 //import all the customized sass file here
 
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../header/styles/header.scss";

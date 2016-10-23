@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="188px" height="64px" viewBox="0 0 188 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <text id="Trans-X" font-family="MarkerFelt-Thin, Marker Felt" font-size="48" font-weight="normal" fill="#2A3A8B">
+                <tspan x="31" y="59">Trans-X</tspan>
+            </text>
+            <path d="M39.2930004,25.5 C104.403302,-7.13484192 56.7930004,34.6126984 56.7930004,25.5 C56.7930004,16.3873016 48.9579835,9 39.2930004,9 C29.6280172,9 21.7930004,16.3873016 21.7930004,25.5 C21.7930004,34.6126984 -25.8173008,58.1348419 39.2930004,25.5 Z" id="Oval" stroke="#000000" stroke-width="2" fill="#123660"></path>
+        </g>
+    </g>
+</svg>

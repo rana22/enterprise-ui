@@ -1,0 +1,27 @@
+header{
+	
+	#entHeader{
+		height: 80px;
+
+		#entHeaderComponents{
+			text-align: right;
+			margin-top: 20px;
+		}
+		a{
+			font-size: 24px;
+			text-align: left;
+		}
+	}
+
+	#clientHeader{
+		margin : 10px 0px 10px 0px;
+		background-color: #06416a;
+		.items{
+		 		margin-top: 70px;
+		 	a { 
+		 		color: #ffffff;
+		 		font-size: 24px;
+		 		}
+		}
+	}
+}

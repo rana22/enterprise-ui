@@ -30,7 +30,7 @@ var gulp			= require('gulp'),
 			fonts:[],
 			style:['bower_components/bootstrap-sass/stylesheets/_bootstrap.scss',
 					'app/core/styles/app.scss'],
-			assests:[],
+			assets:['app/core/assets/*.svg'],
 			index:['app/core/views/index.html'],
 			views:['app/dashboard/views/dashboard.html',
 					'app/header/views/header.html'],
@@ -84,6 +84,11 @@ gulp.task('copy-index', function(){
 	.pipe(gulp.dest('app/build'))
 });
 
+gulp.task('copy-assets', function(){
+	return gulp.src(config.sources.assets)
+	.pipe(gulp.dest('app/build/assets'))
+});
+
 gulp.task('copy-views', function(){
 	return gulp.src(config.sources.views).
 	pipe(gulp.dest('app/build/views'))
@@ -106,7 +111,7 @@ gulp.task('unittest', function(done){
 	}, done).start();
 });
 
-gulp.task('build', ['build-js', 'copy-index', 'copy-views', 'build-css']);
+gulp.task('build', ['build-js', 'copy-index', 'copy-views', 'build-css','copy-assets']);
 
 gulp.task('serve', ['watch' , 'connect'])
 

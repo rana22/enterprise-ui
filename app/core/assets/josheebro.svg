@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="149px" height="109px" viewBox="0 0 149 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.6687595,45.9296875 L10.6687595,26.9060601 C10.6687595,16.9685332 18.7274197,8.91257588 28.667301,8.91257588 L113.001458,8.91257588 C122.941778,8.91257588 131,16.9759882 131,26.9085197 L131,82.0040561 C131,91.9429415 122.94134,100 113.001458,100 L28.667301,100 C18.726981,100 10.6687595,91.9343403 10.6687595,81.9953689 L10.6687595,45.9296875 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="120.33124" height="91.0874241" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <text id="Joshee-Brother’s" transform="translate(84.490088, 37.712576) rotate(330.000000) translate(-84.490088, -37.712576) " font-family="SignPainter-HouseScript, SignPainter" font-size="36" font-weight="normal" fill="#FFFFFF">
+                <tspan x="13.6687595" y="33.9125759">Joshee</tspan>
+                <tspan x="13.6687595" y="62.7125759">Brother’s</tspan>
+            </text>
+            <g id="Rectangle-2">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill-opacity="0.1" fill="#383D33" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use stroke="#FFFFFF" mask="url(#mask-4)" stroke-width="8" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
