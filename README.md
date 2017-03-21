@@ -1,3 +1,4 @@
+#Project Moved to Angular 2 - still skeleton set up can be used for developing angular ONE app. 
 # enterprise-ui
 Seed project for small business 
 ##Steps to set up 
